@@ -1,0 +1,857 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: #004080;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 5px solid #003366;
+    position: relative;
+}
+
+header .logo {
+    max-height: 60px;
+}
+
+header nav {
+    flex: 1;
+    text-align: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+
+/* Timeline Section */
+#timeline {
+    background-image: url('img/attttttt.png'); 
+    background-position: right top;
+    background-size: 100% 100%; /* Adicione essa linha */
+    position: relative;
+    overflow: hidden;
+    padding: 65px 0;
+    margin: 0px;
+    text-align: center;
+}
+
+#timeline .container {
+    position: relative;
+}
+
+#timeline h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    scrollbar-width: none; /* Esconde a barra de rolagem */
+    -ms-overflow-style: none; /* Esconde a barra de rolagem no IE 10+ */
+}
+
+.timeline-hr {
+    border: none;
+    border-top: 3px solid #004080;
+    margin: -15px 0;
+    width: 11%;
+    transform: translateX(2%);
+}
+
+.timeline-hs {
+    border: none;
+    border-top: 3px solid #004080;
+    margin: -15px 0;
+    width: 25%;
+    transform: translateX(2%);
+}
+
+.timeline::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome, Safari, Edge */
+}
+
+.timeline-wrapper {
+    display: flex;
+}
+
+.timeline-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.timeline-item {
+    flex: 0 0 33.333%;
+    flex-basis: 25%; /* Adicione essa linha */
+    flex-grow: 1; /* Adicione essa linha */
+    padding: 20px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-right: 35px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #004080;
+}
+
+.timeline-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.timeline-navigation-wrapper {
+    margin-top: 50px; /* Ajuste conforme necessário */
+    text-align: center;
+}
+
+.timeline-navigation {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-navigation button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 10%; /* Torna os botões circulares */
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    width: 100px; /* Largura do botão */
+    height: 100px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-navigation button:hover {
+    background-color: #003366;
+}
+
+.timeline-navigation button i {
+    font-size: 1.5em; /* Ajuste o tamanho do ícone */
+}
+
+/* Sobre Section */
+#sobre {
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+}
+
+#sobre p {
+    color: #666; 
+}
+
+#sobre .container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px #a3a1a1;
+    border: 1px solid #ffffff; 
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+#sobre p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Conteúdos Section */
+#conteudos {
+    padding: 40px 0;
+}
+
+.conteudo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(10, 9, 9, 0.1)
+}
+
+.conteudo-item:nth-child(even) .conteudo-imagem {
+    order: 1;
+}
+
+.conteudo-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.conteudo-imagem img {
+    max-width: 100%;
+    height: auto; /* Ajusta automaticamente a altura */
+    border-radius: 15px;
+}
+
+.conteudo-texto {
+    flex: 2;
+    padding: 0 20px;
+}
+
+.conteudo-texto h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.conteudo-texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Conteúdo Principal */
+#main-content {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#main-content h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    margin-top: auto;
+    border-top: 5px solid #003366;
+}
+
+/* certificado */
+.footer-content {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.footer-logo {
+    flex: 0 0 auto; /* Garante que a logo não cresça além do seu tamanho */
+}
+
+.loguinho{
+    padding-top: 30px;
+    width: 115px;
+}
+
+.certificate {
+    text-align:right;
+}
+
+.certificate-image {
+    width: 70px; /* Ajuste o tamanho conforme necessário */
+}
+
+.footer-bottom {
+    padding-top: 0px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* final certi */
+
+
+.social {
+    display: flex; /* Altera para flex para controlar melhor a posição */
+    justify-content:center; /* Centraliza os ícones das redes sociais */
+    align-items: center; /* Alinha verticalmente os ícones */
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+}
+
+.social li {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 10px; /* Espaçamento entre os ícones */
+}
+
+.social li a {
+    color: #ffffff; /* Cor dos ícones das redes sociais */
+    font-size: 20px; /* Tamanho dos ícones */
+}
+
+footer .social li a:hover {
+    color: #000000;
+}
+
+.timeline-navigation {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 500px; /* Espaçamento interno para os botões*/
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total*/
+}
+
+.timeline-navigation button {
+    background-image: linear-gradient(to bottom, #005ea5, #003366);
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+#prevBtn {
+    margin-right: auto; /* Move o botão anterior para a extrema esquerda */
+}
+
+#nextBtn {
+    margin-left: auto; /* Move o botão próximo para a extrema direita */
+}
+
+.timeline-navigation button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-navigation button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* estilo.css */
+
+.localizacao-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .localizacao-subtitle {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .localizacao-image-intro {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+.localizacao-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+ 
+}
+
+.localizacao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(10, 9, 9, 0.1);
+    width: 150%;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.localizacao-image {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.localizacao-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.localizacao-content {
+  width: 70%;
+}
+
+.localizacao-content h3 {
+  margin-top: 0;
+}
+
+.localizacao-content p {
+  margin-bottom: 20px;
+}
+
+#localizacao h2 {
+    color: #004080; /* Cor azul para o título "Localizações" */
+  }
+  
+  .localizacao-subtitle {
+    color: #666; /* Cor cinza para o texto */
+  }
+
+ /* Clientes */
+
+ .clientes h2 {
+  color: #004080;
+}
+
+ .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-top: 40px; /* espaço entre a mensagem e o carrossel */
+  }
+  
+  .carousel-inner {
+    width: 110%; /* ajuste a largura do container para 100% */
+    display: flex; /* faz com que as imagens sejam exibidas lado a lado */
+    flex-wrap: nowrap; /* faz com que as imagens sejam exibidas em uma linha única */
+  }
+  
+  .carousel-item {
+    width: 25%; /* adjust the width to fit your needs */
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .carousel-item img {
+    width: 170px; /* ajuste a largura das imagens */
+    height: 60px; /* ajuste a altura das imagens */
+    padding: 12px;
+ /* faz com que a imagem seja cortada para caber no espaço */
+    border-radius: 15px; /* adiciona um efeito de borda arredondada */
+    margin: 10px; /* adiciona um espaço entre as imagens */
+  }
+
+  .clientes {
+    background-color: #f9f9f9; /* cor de fundo */
+    padding: 40px; /* espaço entre a borda e o conteúdo */
+  }
+  
+  .quote-box {
+    background-color: #ffffff; /* cor de fundo do quote box */
+    border: 1px solid white; /* borda do quote box */
+    padding: 20px; /* espaço entre a borda e o conteúdo do quote box */
+    border-radius: 20px; /* arredondamento das bordas do quote box */
+    box-shadow: 0 0 10px rgba(185, 185, 185, 0.1); /* sombra do quote box */
+  }
+  
+  .quote-box blockquote {
+    font-size: 18px; /* tamanho do texto do quote */
+    font-style: italic; /* estilo do texto do quote */
+    color: #666; /* cor do texto do quote */
+  }
+  
+  .mensagem h4 {
+    margin-top: 20px; /* espaço entre o quote box e a mensagem */
+}
+
+  .quote-box .author {
+    top: 16px;
+    padding: 350px;
+    border-radius: 10px;
+  }
+
+  .mensagem h3 {
+    color: #004080;
+  }
+
+  
+  /* serviços */
+
+  .servicos-titulo {
+    color: #004080;
+    margin-left: 100px; /* Adicione essa linha para dar um espaçamento à esquerda */
+    text-align: left;
+    padding: 40px;
+    
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.servicos-descricao {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%; /* Aumenta a largura do retângulo */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    color: #666;
+}
+
+.servicos-imagem {
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.servicos-texto {
+    flex: 1;
+}
+
+
+.servicos-section {
+    padding: 50px 0; /* Espaçamento interno */
+}
+
+.servicos-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Coluna para posicionar os itens um abaixo do outro */
+    align-items: center; /* Centraliza os itens na página */
+    gap: 20px; /* Espaçamento entre os retângulos */
+}
+
+.servicos-item {
+    display: flex;
+    align-items: center;
+    width: 80%; /* Largura dos retângulos */
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.servicos-item-image {
+    width: 30%; /* Largura da imagem */
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    border-radius: 10px;
+}
+
+.servicos-item-content {
+    flex: 1;
+    color: #666; /* Cor do texto */
+}
+
+
+/* Estilo para a seção de políticas */
+.politicas {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: #004080; /* Cor azul */
+    text-align: left; /* Alinhar o título à esquerda */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.policy-box {
+    background-color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 30px; /* Arredondar as bordas */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(117, 116, 116, 0.1);
+}
+
+.policy-box h3 {
+    color: #004080; /* Cor azul */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.policy-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666; /* Cor do texto dentro dos retângulos */
+}
+
+.policy-box ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666; /* Cor do texto dentro dos retângulos */
+}
+
+.certificado-img {
+    width: 50%;
+    max-width: 150px; /* Ajuste conforme necessário */
+    display: block;
+    margin: 5px auto; /* Centraliza a imagem */
+}
+
+/* Estilo do formulário de denúncia de assédio */
+.formulario-assedio {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(49, 49, 49, 0.1);
+    margin-top: 30px;
+    max-width: 600px; /* Reduzi o máximo para 600px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario-assedio fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formulario-assedio legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #050505;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #d8d7d7;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.checkbox-group label {
+    margin-right: 15px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #1a1a1a;
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.form-group button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    min-height: 50px;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* formulario*/
+
+
+/* cookies*/
+.cookie-consent {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro */
+    width: 900px; /* Largura do banner */
+    background-color: #ffffff; /* Cor de fundo azul */
+    color: #000000; /* Cor do texto */
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Borda arredondada */
+    border: 1px solid #000000; /* Adiciona a borda preta */
+    z-index: 1000;
+}
+.cookie-consent p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-consent button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.cookie-consent button:hover {
+    background-color: #084888;
+}
+
+
+
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-unit {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-unit img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 200px; /* Define a altura fixa */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o contêiner */
+    margin-bottom: 20px;
+}
+
+.contact-unit iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.blue-text {
+    color: #004080;
+}
